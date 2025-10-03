@@ -1,0 +1,12 @@
+name: Geert-Jan GitHub Actions Demo
+
+on:
+  push:
+    branches:
+      - main   # only run when pushing to 'main'
+
+jobs:
+  echo-something:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Geert-Jan echoed a message. Bravo!"
