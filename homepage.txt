@@ -1,0 +1,15 @@
+<h2>Short description</h2>
+
+<p>This webpage shows a small Java Spring Boot project. It lets you select a Dutch town and returns demographic info. Creating this app familiarized me with:</p>
+
+<ul>
+<li>Spring Boot</li>
+<li>PostgreSQL</li>
+<li>Public api's (<a href="https://opendata.cbs.nl/#/CBS/nl/">CBS</a> and <a href="https://api.pdok.nl/bzk/locatieserver/search/v3_1/ui/">PDOK</a>)</li>
+<li>Linux</li>
+<li>Docker</li>
+<li>Logging</li>
+</ul>
+
+<p>In the <a href="https://github.com/GeertJan-Kuip">Github repository</a> you find the code and an extensive readme file describing different aspects of the app. You can also check <a href="https://geertjan-kuip.github.io/">my blog</a> that tracks my learning process with articles on technical subjects. If you'd like to contact me, my LinkedIn profile is <a href="https://www.linkedin.com/in/geert-jan-kuip-95387630/">here</a>.</p>
+

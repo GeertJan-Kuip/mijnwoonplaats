@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mijn Woonplaats - informatie over Nederlandse dorpen en steden</title>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <!-- Wide column -->
+    <div class="main-column">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Typ de naam van een woonplaats..."/>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <div id="result" class="result">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Narrow column -->
+    <div class="side-column">
+        <div th:utext=="${textLeft}">Placeholder message</div>
+    </div>
+</div>
+
+<script th:src="@{/js/mijnwoonplaats.js}"></script>
+</body>
+</html>

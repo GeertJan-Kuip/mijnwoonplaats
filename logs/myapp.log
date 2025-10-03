@@ -1,0 +1,10 @@
+2025-09-29T16:31:25.968+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 16136 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-09-29T16:31:25.981+02:00 DEBUG 16136 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-29T16:31:25.981+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : The following 1 profile is active: "dev"
+2025-09-29T16:31:33.134+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 7.922 seconds (process running for 8.533)
+2025-09-29T16:31:33.140+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-09-29T16:31:33.301+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-09-29T16:31:33.304+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-09-29T16:31:33.304+02:00  INFO 16136 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-09-29T20:15:07.839+02:00  WARN 16136 --- [mijnwoonplaats] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m5s549ms933µs600ns).
+2025-09-29T21:14:43.326+02:00  WARN 16136 --- [mijnwoonplaats] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m34s641ms768µs300ns).

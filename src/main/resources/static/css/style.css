@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* wide left, narrow right */
+    height: 100vh;
+}
+
+.main-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* important: allows anchoring children */
+}
+
+/* fixed-position search box */
+.search-box {
+    width: 50%;
+    position: absolute;
+    top: 20%; /* stays at 30% of screen height, no jump */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#searchInput:focus {
+    border-color: #0077cc;
+}
+
+/* dropdown rollout */
+.suggestions {
+    position: absolute;
+    top: 100%; /* below input */
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none; /* hidden by default */
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* results appear below, without moving input */
+.result {
+    text-align: left;
+    margin-top: 120px; /* extra space so they don’t overlap input */
+    font-size: 18px;
+    line-height: 150%;
+    /* color: #444; */
+}
+
+.side-column {
+    padding: 30px;
+    margin-right: 50px;
+    border-left: 1px solid #eee;
+    font-size: 14px;
+    line-height: 180%;
+}
+
+.side-column h2 {
+    color: #666
+}
