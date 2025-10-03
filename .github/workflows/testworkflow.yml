@@ -9,11 +9,16 @@ jobs:
   create-mavne-package-skip-tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
-    - uses: actions/setup-java@v5
+    - name: Set up Java
+      uses: actions/checkout@v5
+
+    - name: Package without testing
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: '21'
         cache: 'maven'
+        cache-dependency-path: pom.xml  # watch your pom.xml
+        
     - name: Build with Maven
       run: mvn -B package -DskipTests --file pom.xml
