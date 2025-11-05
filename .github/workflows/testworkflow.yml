@@ -12,10 +12,10 @@ jobs:
     - name: Print funny line
       run: echo "Dit is een grappig zinnetje."
 
-    - name: Set up Java
+    - name: General checkout
       uses: actions/checkout@v5
 
-    - name: Package without testing
+    - name: Setup Java
       uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
@@ -24,4 +24,5 @@ jobs:
         cache-dependency-path: pom.xml  # watch your pom.xml
 
     - name: Build with Maven
-      run: mvn -B package -DskipTests --file pom.xml
+      # run: mvn -B package -DskipTests --file pom.xml
+      run: mvn -B package --file pom.xml
