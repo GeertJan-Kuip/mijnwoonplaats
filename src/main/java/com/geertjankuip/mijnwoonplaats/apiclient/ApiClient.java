@@ -87,6 +87,7 @@ public class ApiClient implements ApiClientMethodEnforcer{
 
         List<BuurtDTO> listPart1 = fetchBuurten(9999,0);
         List<BuurtDTO> listPart2 = fetchBuurten(9999,9999);
+
         listPart1.addAll(listPart2);
         return listPart1;
     }
@@ -95,6 +96,7 @@ public class ApiClient implements ApiClientMethodEnforcer{
 
         try{
             ResponseEntity<JsonNode> root = template.getForEntity(uriCreation.createUriBuurt(top, skip), JsonNode.class);
+
             if (root.getStatusCode().is2xxSuccessful()) {
 
                 JsonNode valueNode = root.getBody().path("value");
@@ -102,6 +104,7 @@ public class ApiClient implements ApiClientMethodEnforcer{
                 });
             }
         } catch(Exception e){
+            log.warn(e.getMessage());
             log.warn("The catch clause of the fetchBuurten() method was activated");
         }
         return Collections.emptyList();

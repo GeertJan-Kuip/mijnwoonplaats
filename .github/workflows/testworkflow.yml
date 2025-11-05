@@ -9,6 +9,9 @@ jobs:
   create-mavne-package-skip-tests:
     runs-on: ubuntu-latest
     steps:
+    - name: Print funny line
+      run: echo "Dit is een grappig zinnetje."
+
     - name: Set up Java
       uses: actions/checkout@v5
 
@@ -19,6 +22,6 @@ jobs:
         java-version: '21'
         cache: 'maven'
         cache-dependency-path: pom.xml  # watch your pom.xml
-        
+
     - name: Build with Maven
       run: mvn -B package -DskipTests --file pom.xml
