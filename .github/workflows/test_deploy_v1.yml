@@ -1,0 +1,65 @@
+name: Build, Test and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build and test
+        run: mvn -B verify --file pom.xml
+
+      - name: Package app (skip tests)
+        run: mvn -B package -DskipTests --file pom.xml
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-jar
+          path: target/*.jar
+
+#  deploy:
+#    needs: build-and-test
+#    runs-on: ubuntu-latest
+#    if: success()        # only runs if tests passed
+#
+#    steps:
+#      - name: Download built artifact
+#        uses: actions/download-artifact@v4
+#        with:
+#          name: app-jar
+#          path: app/
+#
+#      - name: Copy app and build Docker image on server
+#        uses: appleboy/scp-action@v0.1.7
+#        with:
+#          host: ${{ secrets.DEPLOY_HOST }}
+#          username: ${{ secrets.DEPLOY_USER }}
+#          key: ${{ secrets.DEPLOY_KEY }}
+#          source: "app/*.jar"
+#          target: "~/deploy/"
+#
+#      - name: SSH and deploy Docker container
+#        uses: appleboy/ssh-action@v1.2.0
+#        with:
+#          host: ${{ secrets.DEPLOY_HOST }}
+#          username: ${{ secrets.DEPLOY_USER }}
+#          key: ${{ secrets.DEPLOY_KEY }}
+#          script: |
+#            cd ~/deploy
+#            docker build -t myapp:latest .
+#            docker stop myapp || true
+#            docker rm myapp || true
+#            docker run -d --name myapp -p 8080:8080 myapp:latest
