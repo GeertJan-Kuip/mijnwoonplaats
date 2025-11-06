@@ -30,17 +30,17 @@ jobs:
           name: app-jar
           path: target/*.jar
 
-#  deploy:
-#    needs: build-and-test
-#    runs-on: ubuntu-latest
-#    if: success()        # only runs if tests passed
-#
-#    steps:
-#      - name: Download built artifact
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: app-jar
-#          path: app/
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: success()        # only runs if tests passed
+
+    steps:
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-jar
+          path: app/
 #
 #      - name: Copy app and build Docker image on server
 #        uses: appleboy/scp-action@v0.1.7
