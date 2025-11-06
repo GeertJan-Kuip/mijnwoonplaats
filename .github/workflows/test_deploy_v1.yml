@@ -41,15 +41,15 @@ jobs:
         with:
           name: app-jar
           path: app/
-#
-#      - name: Copy app and build Docker image on server
-#        uses: appleboy/scp-action@v0.1.7
-#        with:
-#          host: ${{ secrets.DEPLOY_HOST }}
-#          username: ${{ secrets.DEPLOY_USER }}
-#          key: ${{ secrets.DEPLOY_KEY }}
-#          source: "app/*.jar"
-#          target: "~/deploy/"
+
+      - name: Copy app and build Docker image on server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: "app/*.jar"
+          target: "~/deploy/"
 #
 #      - name: SSH and deploy Docker container
 #        uses: appleboy/ssh-action@v1.2.0
