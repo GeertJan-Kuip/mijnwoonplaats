@@ -15,12 +15,9 @@ public class ApiUrls {
     private String postcodesrequestparamfl;
     private String postcodesrequestparamfq;
     private String postcodesrequestparamrows;
-    private String postcodesrequestparamstart;
     private String buurten;
     private String buurtenrequestparamselect;
     private String buurtenrequestparamfilter;
-    private String buurtenrequestparamtop;
-    private String buurtenrequestparamskip;
 
     public String getWoonplaatsen() {
         return woonplaatsen;
@@ -86,14 +83,6 @@ public class ApiUrls {
         this.postcodesrequestparamrows = postcodesrequestparamrows;
     }
 
-    public String getPostcodesrequestparamstart() {
-        return postcodesrequestparamstart;
-    }
-
-    public void setPostcodesrequestparamstart(String postcodesrequestparamstart) {
-        this.postcodesrequestparamstart = postcodesrequestparamstart;
-    }
-
     public String getBuurten() {
         return buurten;
     }
@@ -116,21 +105,5 @@ public class ApiUrls {
 
     public void setBuurtenrequestparamfilter(String buurtenrequestparamfilter) {
         this.buurtenrequestparamfilter = buurtenrequestparamfilter;
-    }
-
-    public String getBuurtenrequestparamtop() {
-        return buurtenrequestparamtop;
-    }
-
-    public void setBuurtenrequestparamtop(String buurtenrequestparamtop) {
-        this.buurtenrequestparamtop = buurtenrequestparamtop;
-    }
-
-    public String getBuurtenrequestparamskip() {
-        return buurtenrequestparamskip;
-    }
-
-    public void setBuurtenrequestparamskip(String buurtenrequestparamskip) {
-        this.buurtenrequestparamskip = buurtenrequestparamskip;
     }
 }

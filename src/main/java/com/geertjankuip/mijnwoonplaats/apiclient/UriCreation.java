@@ -24,16 +24,6 @@ public class UriCreation {
                 .toUri();
     }
 
-    public URI createUriBuurtShortForm(int top, int skip) {
-        return UriComponentsBuilder
-                .fromHttpUrl(apiUrls.getBuurten())
-                .queryParam("$filter", apiUrls.getBuurtenrequestparamfilter())
-                .queryParam("$top", top)
-                .queryParam("$skip", skip)
-                .build()
-                .toUri();
-    }
-
     public URI createUriBuurt(int top, int skip) {
         return UriComponentsBuilder
                 .fromHttpUrl(apiUrls.getBuurten())

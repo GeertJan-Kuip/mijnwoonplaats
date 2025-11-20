@@ -4,10 +4,15 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      DB_TEST_URL: ${{ secrets.DB_TEST_URL }}
+      DB_TEST_USER: ${{ secrets.DB_TEST_USER }}
+      DB_TEST_PASS: ${{ secrets.DB_TEST_PASS}}
 
     steps:
       - uses: actions/checkout@v5
@@ -50,7 +55,7 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           source: "app/*.jar"
           target: "~/deploy/"
-#
+
 #      - name: SSH and deploy Docker container
 #        uses: appleboy/ssh-action@v1.2.0
 #        with:
