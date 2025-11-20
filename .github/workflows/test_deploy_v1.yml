@@ -55,7 +55,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest app/
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest .
 
       - name: Tag image with Git commit SHA
         run: |
