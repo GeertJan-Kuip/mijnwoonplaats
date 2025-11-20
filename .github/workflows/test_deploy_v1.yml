@@ -53,6 +53,21 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest app/
+
+      - name: Tag image with Git commit SHA
+        run: |
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest \
+            ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:${{ github.sha }}
+
+      - name: Push Docker images to Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:${{ github.sha }}    
+      
+
 #      - name: Create Docker image
 
 #      - name: Copy app and build Docker image on server
