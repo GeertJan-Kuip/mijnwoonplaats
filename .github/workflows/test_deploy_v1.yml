@@ -41,6 +41,9 @@ jobs:
     if: success()        # only runs if tests passed
 
     steps:
+      - name: Checkout source code
+        uses: actions/checkout@v5
+
       - name: Download built artifact
         uses: actions/download-artifact@v4
         with:
@@ -55,7 +58,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest app/
 
       - name: Tag image with Git commit SHA
         run: |
