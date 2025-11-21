@@ -68,29 +68,37 @@ jobs:
       - name: Push Docker images to Docker Hub
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:${{ github.sha }}    
-      
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mijnwoonplaatsapp:${{ github.sha }}   
+          
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            # Load .bashrc to access DB_URL, DB_USER, DB_PASS
+            source ~/.bashrc
 
-#      - name: Create Docker image
+            echo "Pulling latest image..."
+            docker pull geert679/mijnwoonplaatsapp:latest
 
-#      - name: Copy app and build Docker image on server
-#        uses: appleboy/scp-action@v0.1.7
-#        with:
-#          host: ${{ secrets.DEPLOY_HOST }}
-#          username: ${{ secrets.DEPLOY_USER }}
-#          key: ${{ secrets.DEPLOY_KEY }}
-#          source: "app/*.jar"
-#          target: "~/deploy/"
-#
-#      - name: SSH and deploy Docker container
-#        uses: appleboy/ssh-action@v1.2.0
-#        with:
-#          host: ${{ secrets.DEPLOY_HOST }}
-#          username: ${{ secrets.DEPLOY_USER }}
-#          key: ${{ secrets.DEPLOY_KEY }}
-#          script: |
-#            cd ~/deploy
-#            docker build -t mijnwoonplaatsapp:latest .
-#            docker stop mijnwoonplaatscontainerapp || true
-#            docker rm mijnwoonplaatscontainerapp || true
-#            docker run -d --name mijnwoonplaatscontainerapp -p 8080:8080 mijnwoonplaatsapp:latest
+            echo "Stopping old container if exists..."
+            docker stop mijnwoonplaatscontainerapp || true
+
+            echo "Removing old container if exists..."
+            docker rm mijnwoonplaatscontainerapp || true
+
+            echo "Starting new container..."
+            docker run -d \
+              --name mijnwoonplaatscontainerapp \
+              --restart unless-stopped \
+              --network mijnwoonplaatsnetwork \
+              -p 8080:8080 \
+              -e DB_URL="$DB_URL" \
+              -e DB_USER="$DB_USER" \
+              -e DB_PASS="$DB_PASS" \
+              geert679/mijnwoonplaatsapp:latest
+
+            echo "Deployment complete."
+             
