@@ -96,11 +96,9 @@ jobs:
               --network mijnwoonplaatsnetwork \
               -v /opt/mijnwoonplaats/config:/config:ro \
               -p 8080:8080 \
-              -e DB_URL="$DB_URL" \
-              -e DB_USER="$DB_USER" \
-              -e DB_PASS="$DB_PASS" \
-              -e SPRING_PROFILES_ACTIVE=prod \
+              --env-file /opt/mijnwoonplaats/env.list \
               geert679/mijnwoonplaatsapp:latest
 
             echo "Deployment complete."
+
              

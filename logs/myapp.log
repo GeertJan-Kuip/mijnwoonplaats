@@ -25,3 +25,12 @@
 2025-11-22T17:35:51.185+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
 2025-11-22T17:35:51.186+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
 2025-11-22T17:36:01.206+01:00  INFO 5740 --- [mijnwoonplaats] [http-nio-8080-exec-4] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
+2025-11-22T18:47:30.773+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 4148 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-11-22T18:47:30.799+01:00 DEBUG 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-11-22T18:47:30.802+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T18:47:54.773+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 26.592 seconds (process running for 28.316)
+2025-11-22T18:47:54.785+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-11-22T18:47:55.430+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-11-22T18:47:55.435+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-11-22T18:47:55.435+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-11-22T18:48:12.734+01:00  INFO 4148 --- [mijnwoonplaats] [http-nio-8080-exec-2] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
