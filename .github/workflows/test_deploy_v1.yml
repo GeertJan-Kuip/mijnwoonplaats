@@ -93,13 +93,13 @@ jobs:
             sudo docker run -d \
               --name mijnwoonplaatscontainerapp \
               --restart unless-stopped \
-              --network mijnwoonplaatsnetwork \
-              --spring.profiles.active=prod \
+              --network mijnwoonplaatsnetwork \      
               -v /opt/mijnwoonplaats/config:/config:ro \
               -p 8080:8080 \
               -e DB_URL="$DB_URL" \
               -e DB_USER="$DB_USER" \
               -e DB_PASS="$DB_PASS" \
+              -e SPRING_PROFILES_ACTIVE=prod \
               geert679/mijnwoonplaatsapp:latest
 
             echo "Deployment complete."
