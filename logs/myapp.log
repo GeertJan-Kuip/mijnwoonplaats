@@ -1,36 +1,56 @@
-2025-11-22T17:27:04.990+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 4420 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
-2025-11-22T17:27:05.032+01:00 DEBUG 4420 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
-2025-11-22T17:27:05.035+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-22T17:27:28.331+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 26.056 seconds (process running for 27.994)
-2025-11-22T17:27:28.342+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
-2025-11-22T17:27:28.881+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
-2025-11-22T17:27:28.886+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
-2025-11-22T17:27:28.886+01:00  INFO 4420 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
-2025-11-22T17:28:03.895+01:00  INFO 4420 --- [mijnwoonplaats] [http-nio-8080-exec-6] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
-2025-11-22T17:33:33.847+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 1436 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
-2025-11-22T17:33:33.858+01:00 DEBUG 1436 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
-2025-11-22T17:33:33.862+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-22T17:33:54.808+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 23.316 seconds (process running for 25.159)
-2025-11-22T17:33:54.818+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
-2025-11-22T17:33:55.268+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
-2025-11-22T17:33:55.274+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
-2025-11-22T17:33:55.275+01:00  INFO 1436 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
-2025-11-22T17:34:04.959+01:00  INFO 1436 --- [mijnwoonplaats] [http-nio-8080-exec-2] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
-2025-11-22T17:35:29.334+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 5740 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
-2025-11-22T17:35:29.342+01:00 DEBUG 5740 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
-2025-11-22T17:35:29.344+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-22T17:35:50.602+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 23.725 seconds (process running for 25.457)
-2025-11-22T17:35:50.615+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
-2025-11-22T17:35:51.178+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
-2025-11-22T17:35:51.185+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
-2025-11-22T17:35:51.186+01:00  INFO 5740 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
-2025-11-22T17:36:01.206+01:00  INFO 5740 --- [mijnwoonplaats] [http-nio-8080-exec-4] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
-2025-11-22T18:47:30.773+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 4148 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
-2025-11-22T18:47:30.799+01:00 DEBUG 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
-2025-11-22T18:47:30.802+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-22T18:47:54.773+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 26.592 seconds (process running for 28.316)
-2025-11-22T18:47:54.785+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
-2025-11-22T18:47:55.430+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
-2025-11-22T18:47:55.435+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
-2025-11-22T18:47:55.435+01:00  INFO 4148 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
-2025-11-22T18:48:12.734+01:00  INFO 4148 --- [mijnwoonplaats] [http-nio-8080-exec-2] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 1827
+2025-12-01T20:48:30.149+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Starting IntegrationTests using Java 21.0.7 with PID 14192 (started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T20:48:30.175+01:00 DEBUG 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T20:48:30.179+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : The following 1 profile is active: "test"
+2025-12-01T20:48:51.994+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Started IntegrationTests in 23.916 seconds (process running for 36.911)
+2025-12-01T20:48:52.010+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T20:48:52.734+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T20:48:52.740+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T20:48:52.745+01:00  INFO 14192 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T20:48:56.897+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 12496 null values found in fetched Buurten, field gemiddeldInkomenPerInwoner81.
+2025-12-01T20:48:56.897+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 753 null values found in fetched Buurten, field afstandTotGroteSupermarkt116.
+2025-12-01T20:48:56.901+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 753 null values found in fetched Buurten, field afstandTotSchool118.
+2025-12-01T20:48:56.901+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 84 null values found in fetched Buurten, field mateVanStedelijkheid125.
+2025-12-01T20:48:57.165+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 1 null values found in fetched Postcodes4, field pdokPostcode4.
+2025-12-01T20:48:57.166+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 1 null values found in fetched Postcodes4, field pdokWoonplaatscode.
+2025-12-01T20:49:02.048+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.fetchBuurten() returned collection with 0 buurten, which is less than the required 13000. Table buurten not synchronized.
+2025-12-01T20:49:02.088+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.fetchWoonplaatsen() returned collection with 0 woonplaatsen, which is less than the required 2400. Table woonplaatsen not synchronized.
+2025-12-01T20:49:02.104+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Endpointstest result (at least one endpoint failed): true, false, true, true
+2025-12-01T20:49:02.309+01:00  WARN 14192 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.setPostcodes() returned collection with 0 postcodes, which is less than the required 4000. Table postcodes4 not synchronized.
+2025-12-01T21:01:57.111+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 152 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T21:01:57.120+01:00 DEBUG 152 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T21:01:57.122+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T21:02:20.185+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 25.849 seconds (process running for 27.607)
+2025-12-01T21:02:20.208+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T21:02:20.916+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T21:02:20.922+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T21:02:20.923+01:00  INFO 152 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T21:02:57.983+01:00  INFO 152 --- [mijnwoonplaats] [http-nio-8080-exec-6] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 440
+2025-12-01T21:37:02.869+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Starting IntegrationTests using Java 21.0.7 with PID 13524 (started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T21:37:02.874+01:00 DEBUG 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T21:37:02.876+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : The following 1 profile is active: "test"
+2025-12-01T21:37:22.839+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.IntegrationTests      : Started IntegrationTests in 21.963 seconds (process running for 34.184)
+2025-12-01T21:37:22.849+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T21:37:23.604+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T21:37:23.614+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T21:37:23.614+01:00  INFO 13524 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T21:37:27.279+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 12496 null values found in fetched Buurten, field gemiddeldInkomenPerInwoner81.
+2025-12-01T21:37:27.282+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 753 null values found in fetched Buurten, field afstandTotGroteSupermarkt116.
+2025-12-01T21:37:27.284+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 753 null values found in fetched Buurten, field afstandTotSchool118.
+2025-12-01T21:37:27.284+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 84 null values found in fetched Buurten, field mateVanStedelijkheid125.
+2025-12-01T21:37:27.713+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 1 null values found in fetched Postcodes4, field pdokPostcode4.
+2025-12-01T21:37:27.715+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiIntegrityCheck        : 1 null values found in fetched Postcodes4, field pdokWoonplaatscode.
+2025-12-01T21:37:32.238+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.fetchBuurten() returned collection with 0 buurten, which is less than the required 13000. Table buurten not synchronized.
+2025-12-01T21:37:32.272+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.fetchWoonplaatsen() returned collection with 0 woonplaatsen, which is less than the required 2400. Table woonplaatsen not synchronized.
+2025-12-01T21:37:32.309+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Endpointstest result (at least one endpoint failed): true, false, true, true
+2025-12-01T21:37:32.511+01:00  WARN 13524 --- [mijnwoonplaats] [main] c.g.m.apiclient.ApiScheduler             : Method apiService.setPostcodes() returned collection with 0 postcodes, which is less than the required 4000. Table postcodes4 not synchronized.
+2025-12-01T21:39:37.248+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 11796 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T21:39:37.257+01:00 DEBUG 11796 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T21:39:37.261+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T21:39:58.932+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 24.154 seconds (process running for 25.894)
+2025-12-01T21:39:58.948+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T21:39:59.516+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T21:39:59.522+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T21:39:59.523+01:00  INFO 11796 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T21:40:25.947+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-2] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 440
+2025-12-01T21:40:32.740+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-4] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 87
+2025-12-01T21:40:43.870+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-7] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 2141

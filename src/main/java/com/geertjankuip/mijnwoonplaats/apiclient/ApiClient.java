@@ -132,7 +132,7 @@ public class ApiClient implements ApiClientMethodEnforcer{
         int batchSize = 100;
         List<Postcode4DTO> resultList = new ArrayList<>();
 
-        URI myurl = null;
+        URI myurl;
         int counter = 0;
         boolean proceed = true;
 
@@ -154,7 +154,7 @@ public class ApiClient implements ApiClientMethodEnforcer{
 
                 JsonNode docsNode = response.getBody().path("response").path("docs");
 
-                if (docsNode.isArray() && docsNode.size() > 0) {
+                if (docsNode.isArray() && !docsNode.isEmpty()) {
                     resultList.addAll(objectMapper.convertValue(docsNode, new TypeReference<List<Postcode4DTO>>() {
                     }));
                 } else {
@@ -166,10 +166,6 @@ public class ApiClient implements ApiClientMethodEnforcer{
         }catch (Exception e){
 
         }
-
-
         return Collections.emptyList();
     }
-
-
 }

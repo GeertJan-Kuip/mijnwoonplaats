@@ -1,6 +1,5 @@
 package com.geertjankuip.mijnwoonplaats;
 
-import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,11 +16,8 @@ public class MijnwoonplaatsApplication {
 		SpringApplication.run(MijnwoonplaatsApplication.class, args);
 	}
 
-
-
 	@Bean
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
-
 }

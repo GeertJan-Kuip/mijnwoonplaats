@@ -1,7 +1,6 @@
 package com.geertjankuip.mijnwoonplaats.textcreation;
 
 import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -162,7 +161,7 @@ public class TextCreator {
         Characteristic ouderen = wpd.getAssessment().ouderen();
         String tussenvoegsel = createTussenvoegselOuderenKinderen(wpd);
 
-        if (tussenvoegsel=="terwijl ") {
+        if (tussenvoegsel.equals("terwijl ")) {
             switch (kinderen) {
                 case Characteristic.ERG_WEINIG_KINDEREN:
                     return String.format(text09,percercentageKinderenAsString,NationalData2023.PERCENTAGE15MIN.getValue());
@@ -178,7 +177,7 @@ public class TextCreator {
                     return "";
             }
         }
-        if (tussenvoegsel=="en ook ") {
+        if (tussenvoegsel.equals("en ook ")) {
             switch (kinderen) {
                 case Characteristic.ERG_WEINIG_KINDEREN:
                     return String.format(text09a,percercentageKinderenAsString,NationalData2023.PERCENTAGE15MIN.getValue());

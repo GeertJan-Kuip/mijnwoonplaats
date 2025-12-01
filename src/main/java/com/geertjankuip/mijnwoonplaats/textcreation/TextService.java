@@ -1,7 +1,6 @@
 package com.geertjankuip.mijnwoonplaats.textcreation;
 
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 @Component
@@ -9,7 +8,6 @@ public class TextService {
 
     DataAssessment dataAssessment;
     TextCreator textCreator;
-
 
     public TextService(DataAssessment dataAssessment, TextCreator textCreator) {
         this.dataAssessment = dataAssessment;
@@ -28,6 +26,4 @@ public class TextService {
         }
         return textObject;
     }
-
-
 }

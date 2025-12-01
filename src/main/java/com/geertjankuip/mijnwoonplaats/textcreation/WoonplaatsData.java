@@ -1,6 +1,5 @@
 package com.geertjankuip.mijnwoonplaats.textcreation;
 
-import java.util.List;
 
 public class WoonplaatsData {
 

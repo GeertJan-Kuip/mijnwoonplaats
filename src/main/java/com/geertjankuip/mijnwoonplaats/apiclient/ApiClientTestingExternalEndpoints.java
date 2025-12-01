@@ -9,7 +9,6 @@ import com.geertjankuip.mijnwoonplaats.datatransferobjects.WoonplaatsDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,6 @@ public class ApiClientTestingExternalEndpoints {
     ObjectMapper objectMapper;
     ApiUrls apiUrls;
     UriCreation uriCreation;
-
 
     public ApiClientTestingExternalEndpoints(RestTemplate template, ObjectMapper objectMapper, ApiUrls apiUrls,
                                               UriCreation uriCreation) {
@@ -70,7 +68,7 @@ public class ApiClientTestingExternalEndpoints {
 
                 JsonNode docsNode = root.getBody().path("response").path("docs");
 
-                if (docsNode.isArray() && docsNode.size() > 0) {
+                if (docsNode.isArray() && !docsNode.isEmpty()) {
                     woonplaatsNaam = docsNode.get(0).path("woonplaatsnaam").asText();
                     woonplaatsDTO = objectMapper.convertValue(docsNode.get(0), new TypeReference<WoonplaatsDTO>() {
                     });
@@ -112,7 +110,7 @@ public class ApiClientTestingExternalEndpoints {
 
             JsonNode docsNode = root.getBody().path("response").path("docs");
 
-            if (docsNode.isArray() && docsNode.size() > 0) {
+            if (docsNode.isArray() && !docsNode.isEmpty()) {
                 resultList.addAll(objectMapper.convertValue(docsNode, new TypeReference<List<Postcode4DTO>>() {
                 }));
             }

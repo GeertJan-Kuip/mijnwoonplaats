@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Set;
 
@@ -18,9 +17,9 @@ public class ApiScheduler {
 
     private static final Logger log = LoggerFactory.getLogger(ApiScheduler.class);
 
-    private ApiClientTestingExternalEndpoints apiClientTestingExternalEndpoints;
-    private EndpointsTestRepository endpointsTestRepository;
-    private ApiService apiService;
+    private final ApiClientTestingExternalEndpoints apiClientTestingExternalEndpoints;
+    private final EndpointsTestRepository endpointsTestRepository;
+    private final ApiService apiService;
 
     public ApiScheduler(ApiClientTestingExternalEndpoints apiClientTestingExternalEndpoints,
                         EndpointsTestRepository endpointsTestRepository, ApiService apiService) {
@@ -33,6 +32,11 @@ public class ApiScheduler {
     public void retrieveOnceADay() {
 
         log.info("This is the retrieveOnceADay() method running the EndPointsTest!");
+
+        retrieveOnceADayImpl();
+    }
+
+    public EndpointsTest retrieveOnceADayImpl(){
 
         Boolean val1 = apiClientTestingExternalEndpoints.testWoonplaatsEndpoint();
         Boolean val2 = apiClientTestingExternalEndpoints.testWoonplaatsDetailsEndpoint();
@@ -48,12 +52,23 @@ public class ApiScheduler {
         }
 
         endpointsTestRepository.save(endpointsTest);
+
+        return endpointsTest;
     }
 
     @Scheduled(cron = "0 0 1 1 * ?")
     public void fullUpdate(){
 
         log.info("Start monthly update of tables woonplaatsen, buurten and postcodes4.");
+
+        fullUpdateWoonplaatsen();
+        fullUpdateBuurten();
+        fullUpdatePostcodes();
+
+        log.info("Monthly update of tables woonplaatsen, buurten and postcodes4 finished.");
+    }
+
+    public Integer fullUpdateWoonplaatsen(){
 
         List<Woonplaats> listWoonplaatsen = apiService.fetchWoonplaatsen(3000,0);
         if(listWoonplaatsen.size()>2400) {
@@ -64,6 +79,11 @@ public class ApiScheduler {
                     "Table woonplaatsen not synchronized.", listWoonplaatsen.size());
         }
 
+        return listWoonplaatsen.size();
+    }
+
+    public Integer fullUpdateBuurten(){
+
         List<Buurt> listBuurten = apiService.fetchBuurten();
         if(listBuurten.size()>13000) {
             apiService.synchronizeTableBuurten(listBuurten);
@@ -72,6 +92,11 @@ public class ApiScheduler {
             log.warn("Method apiService.fetchBuurten() returned collection with {} buurten, which is less than the required 13000. " +
                     "Table buurten not synchronized.", listBuurten.size());
         }
+
+        return listBuurten.size();
+    }
+
+    public Integer fullUpdatePostcodes(){
 
         Set<Postcode4> setPostcodes = apiService.fetchPostcodes();
         if(setPostcodes.size()>4000) {
@@ -82,6 +107,7 @@ public class ApiScheduler {
                     "Table postcodes4 not synchronized.", setPostcodes.size());
         }
 
-        log.info("Monthly update of tables woonplaatsen, buurten and postcodes4 finished.");
+        return setPostcodes.size();
     }
+
 }

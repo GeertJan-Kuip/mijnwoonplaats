@@ -22,8 +22,6 @@ public class Postcode4 {
         return id;
     }
 
-
-
     public void setId(Postcode4EmbeddableId id) {
         this.id = id;
     }

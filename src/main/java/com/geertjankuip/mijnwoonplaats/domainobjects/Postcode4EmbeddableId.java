@@ -1,7 +1,6 @@
 package com.geertjankuip.mijnwoonplaats.domainobjects;
 
 import jakarta.persistence.Embeddable;
-
 import java.io.Serializable;
 import java.util.Objects;
 

@@ -2,8 +2,6 @@ package com.geertjankuip.mijnwoonplaats.datatransferobjects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.geertjankuip.mijnwoonplaats.domainobjects.Postcode4;
-
 import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

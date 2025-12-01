@@ -5,7 +5,6 @@ import com.geertjankuip.mijnwoonplaats.domainobjects.Woonplaats;
 import com.geertjankuip.mijnwoonplaats.repositories.BuurtRepository;
 import com.geertjankuip.mijnwoonplaats.repositories.WoonplaatsRepository;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 // This class collects all data from all 'buurten' belonging to the selected town and aggregates it
@@ -40,15 +39,14 @@ public class DataAggregator {
 
     public List<Buurt> getBuurtObjects(String woonplaatsCode){
 
-        List<Buurt> buurtList = buurtrepository.findBuurtenByWoonplaatscode(woonplaatsCode);
-        return buurtList;
+        return buurtrepository.findBuurtenByWoonplaatscode(woonplaatsCode);
     }
 
     private Integer getInwonerAantal(List<Buurt> buurtList){
 
-        Integer res=null;
+        Integer res;
         try{
-            res = buurtList.stream().mapToInt(b->b.getAantalInwoners5()).sum();
+            res = buurtList.stream().mapToInt(Buurt::getAantalInwoners5).sum();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -56,9 +54,9 @@ public class DataAggregator {
     }
 
     private Integer get65PlusAantal(List<Buurt> buurtList){
-        Integer res=null;
+        Integer res;
         try{
-            res = buurtList.stream().mapToInt(b->b.getK65JaarOfOuder12()).sum();
+            res = buurtList.stream().mapToInt(Buurt::getK65JaarOfOuder12).sum();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -66,9 +64,9 @@ public class DataAggregator {
     }
 
     private Integer get15MinAantal(List<Buurt> buurtList){
-        Integer res=null;
+        Integer res;
         try{
-            res = buurtList.stream().mapToInt(b->b.getK0To15Jaar8()).sum();
+            res = buurtList.stream().mapToInt(Buurt::getK0To15Jaar8).sum();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -1,7 +1,6 @@
 package com.geertjankuip.mijnwoonplaats.domainobjects;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity

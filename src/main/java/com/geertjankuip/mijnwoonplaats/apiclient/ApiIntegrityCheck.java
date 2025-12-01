@@ -1,15 +1,11 @@
 package com.geertjankuip.mijnwoonplaats.apiclient;
 
-
 import com.geertjankuip.mijnwoonplaats.domainobjects.Buurt;
 import com.geertjankuip.mijnwoonplaats.domainobjects.Postcode4;
 import com.geertjankuip.mijnwoonplaats.domainobjects.Woonplaats;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Set;
 
@@ -110,8 +106,6 @@ public class ApiIntegrityCheck {
             returnValue=true;
         }
 
-
-
         return returnValue;
     }
 
@@ -132,6 +126,4 @@ public class ApiIntegrityCheck {
 
         return returnValue;
     }
-
-
 }
