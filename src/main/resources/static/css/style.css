@@ -7,7 +7,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* wide left, narrow right */
+    grid-template-columns: 4fr 1fr; /* wide left, narrow right */
     height: 100vh;
 }
 
@@ -84,10 +84,11 @@ body {
 
 .side-column {
     padding: 30px;
-    margin-right: 50px;
+    padding-right: 60px;
     border-left: 1px solid #eee;
     font-size: 14px;
     line-height: 180%;
+    background-color: #fafafa;
 }
 
 .side-column h2 {

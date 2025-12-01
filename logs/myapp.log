@@ -54,3 +54,27 @@
 2025-12-01T21:40:25.947+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-2] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 440
 2025-12-01T21:40:32.740+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-4] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 87
 2025-12-01T21:40:43.870+01:00  INFO 11796 --- [mijnwoonplaats] [http-nio-8080-exec-7] c.g.mijnwoonplaats.ControllerClass       : New town being displayed. Id: 2141
+2025-12-01T21:56:13.608+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 17332 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T21:56:13.616+01:00 DEBUG 17332 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T21:56:13.619+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T21:56:36.923+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 25.938 seconds (process running for 28.002)
+2025-12-01T21:56:36.934+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T21:56:37.474+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T21:56:37.480+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T21:56:37.480+01:00  INFO 17332 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T22:01:16.070+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 16444 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T22:01:16.076+01:00 DEBUG 16444 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T22:01:16.080+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T22:01:41.905+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 28.574 seconds (process running for 30.58)
+2025-12-01T22:01:41.919+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T22:01:42.578+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T22:01:42.584+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T22:01:42.584+01:00  INFO 16444 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
+2025-12-01T22:03:16.909+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Starting MijnwoonplaatsApplication using Java 21.0.7 with PID 7584 (C:\Users\geert\Documents\Java projects\mijnwoonplaats\target\classes started by geert in C:\Users\geert\Documents\Java projects\mijnwoonplaats)
+2025-12-01T22:03:16.920+01:00 DEBUG 7584 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-12-01T22:03:16.926+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T22:03:53.965+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.m.MijnwoonplaatsApplication          : Started MijnwoonplaatsApplication in 40.395 seconds (process running for 42.51)
+2025-12-01T22:03:54.044+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Startup script found!
+2025-12-01T22:03:55.710+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table woonplaatsen has 2501 rows, no update required.
+2025-12-01T22:03:55.748+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table buurten has 14421 rows, no update required.
+2025-12-01T22:03:55.761+01:00  INFO 7584 --- [mijnwoonplaats] [main] c.g.mijnwoonplaats.StartupListener       : Table postcodes4 has 4265 rows, no update required.
